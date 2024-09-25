@@ -7,12 +7,17 @@ How to run Ubuntu
 TO START THE UBUNTU 
 - docker run -it ubuntu
 
+To see all the images/conatianers we have been working with 
+-   docker ps -a
+-   docker start -i conatianerId
+
 UBUNTU PACKAGE MANAGER
 
 * apt = is the package manager for ubuntu
 * apt list = To list out all the packages we have 
 
 LINUX DIRECTRIES
+
 / = This is the root directory
 bin = This is for the binary file
 boot = This is the for booting files
@@ -23,4 +28,103 @@ root = This is the home directory for the root user only (only the root user can
 lib= This is use for keeping library files
 var = This is for files that are update frequently
 proc = This include files are includes running proccesses
+cd ~ = Navigate to home
 
+MANIPULATING FILES AND DIRECTRIES
+-   rm = to delete FILES
+-   mv = to rename or move file to another directory
+-   rm -r = to delete or remove directories
+
+
+EDITING AND VIEW FILES
+- cat filename = to open a file with short text
+- more filename = to open a file with long text
+- less = you need to install less (apt install less), less filename
+        The advantages of using less is that it allows us to scroll up and down
+
+NANO (Text Editor for UBUNTU)
+ctrl x = exist NANO
+
+
+REDIRECTION
+cat file.txt > file2.txt = this is gonna move the connect in file.txt to file2.txt
+
+SEARCHING
+-   grep = This is use to search for a word/text inside a file
+-   grep -i = This is use for the search not to be case sensitive 
+
+
+LIST 
+-   ls = this is used for listing files inside a directories
+-   ls -a = This is used for listing files and hidden files inside a directories
+-   ls -l = This is used for listing files and display their properties
+
+FINDING FILES AND DIRECTRIES
+
+-   find = This is use find files inside a directories
+-   find -type f -iname "f*" = find a file type which name start from f , the * means everthing, the (i) means dont be case-sensitive
+-   find  / -type f -name "*.py"
+
+
+
+CHAINING
+
+mkdir test; cd test; echo hello chaining = This is 3 commman chained to be executed at once
+
+mkdir test && cd test && echo hello chaining = This && opertor helps use to stop the other commands in executing in case the first command fails
+
+TO BREAK LONG COMMAND INTO MULTIPLE LINES
+midir test;\ and press enter , then you can write the remain command and follow the pattern
+
+
+TO SEE ALL THE IMAGES/CONTAINERS WE HAVE BEEN WORKING WITH
+-   docker ps -a
+-   docker start -i conatianerId
+
+
+TO ADD MORE ENVIRONMENT VARIABLE TO OUR LINUX OS
+-   echo VARIABLE_NAME = KEY >> .bashrc (.bashrc, is this dir where permanent user environment variable are being saved)
+
+
+MANAGING USER 
+
+-   useradd -m username = to add a new user
+-   cat /etc/passwd = to see the new user added
+
+TO LOGIN AS A USER
+-   docker ps (on a new terminal)
+-   docker exec -it -u (username) (conatianerId) bash
+-   userdel username = to delete user
+
+
+MANAGING GROUPS
+-    why do we need groups , this is because it gives all the users in a specific same permission
+-   groupadd (GROUPNAME) e.g developers = To create a group
+-   cat /etc/group = This is to determine all the groups we have 
+-   usermond -aG (GROUPNAME) (USERNAME) = to add a user to a group
+
+
+FILE PERMISSION 
+-   ls -l = This is to determine the permission of a file
+    dr = anything that starts with (dr) is a directory
+    - =  anything that starts with (-) is a file
+
+T0 UNDERSTAND FILES
+    FILE  rw-r--r-- = This is a 9 letter divided into 3 groups (---group1---group2---group3)
+    - In each group we have (read, write, execute = rwe permission)
+
+FOR THIS FILE (rw-r--r--)
+-   The first-group has permission to (read, write(i.e permission to edit files), but cant execute (i.e permission to be able to get in/ cd the file))
+-   The second-group has permission to (read only, can't write or execute)
+-   The Third- group has permission to (read only, can't write or execute)
+
+
+WHAT ARE THE PERMISSION GROUPS STANDS FOR
+-   FIRST-GROUP = This is the user who owns the file i.e the root user
+-   SECOND-GROUP = This is the permission for the group who owns this file
+-   THIRD-GROUP =  This is the permission got everyone else
+
+TO CHANGE PERMISSION TO BE ABLE TO EXECUTE A FILE
+-   for the root user = chmod u+x (filename);
+-   for the root group = chmod g+x (filename)
+-   for the root others = chmod o+x (filename)

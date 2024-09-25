@@ -11,3 +11,7 @@ WHAT IS HYPERVISOR
 HOW TO DOCKERIZE A PROJECT
 - In your project a file  Dockerfile with no extention
 - The instruction to package our project will be written in the Dockerfile 
+
+To see all the images/conatianers we have been working with 
+-   docker ps -a
+-   docker start -i conatianerId

@@ -17,6 +17,7 @@ CMD ["node", "app.js"]
 
 ##Then go to your project termial and run
 ## docker build -t commit-name e.g (hello-docker) . to package our image / the . is to tell where docker can find a dockerfile, and the dot is stating the currect dir
+## docker build -t hello-docker:1.0 .
 
 
 ## TO LIST ALL THE IMAGES

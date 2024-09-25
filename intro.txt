@@ -1,0 +1,13 @@
+WHAT IS CONTAINER
+* A Conrainer is an isolated environment used in running and application
+* It Allows running multiple apps in isolation
+* They are lightweight i.e they don't need full operating system
+* Need less hardware resourse to work e.g cpu, memory , diskspace
+
+WHAT IS HYPERVISOR
+* An Hypervisor is a software used in running Virtual server/Machine on a Physical Server / Machine
+
+
+HOW TO DOCKERIZE A PROJECT
+- In your project a file  Dockerfile with no extention
+- The instruction to package our project will be written in the Dockerfile 

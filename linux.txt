@@ -1,0 +1,26 @@
+How to run Ubuntu
+- Go to hub.docker.com
+- search for any distro on the search instruction
+
+- docker run Ubuntu (in our working directory)
+
+TO START THE UBUNTU 
+- docker run -it ubuntu
+
+UBUNTU PACKAGE MANAGER
+
+* apt = is the package manager for ubuntu
+* apt list = To list out all the packages we have 
+
+LINUX DIRECTRIES
+/ = This is the root directory
+bin = This is for the binary file
+boot = This is the for booting files
+dev =  This is for devices file {NOTE: everthing is a file in Linux}
+etc = This is for the editable text configuration files
+home = This is where the home directories for users are stored
+root = This is the home directory for the root user only (only the root user can have access to it)
+lib= This is use for keeping library files
+var = This is for files that are update frequently
+proc = This include files are includes running proccesses
+
